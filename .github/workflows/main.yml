@@ -35,3 +35,4 @@ jobs:
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: clients-service
             location: 'south central us'
+            ports: 8001
