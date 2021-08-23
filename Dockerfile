@@ -9,6 +9,7 @@ FROM adoptopenjdk/openjdk8
 
 RUN adduser --system --group spring
 USER spring:spring
+EXPOSE 8001
 ARG JAR_FILE=/workspace/target/*.jar
 COPY --from=build ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
